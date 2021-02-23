@@ -29,7 +29,7 @@ public class KeyController {
 	@PutMapping("/{key}/value/{value}")
 	public ResponseEntity<?> addAndUpdate(@PathVariable("key")String key, @PathVariable("value") Integer value){
 		keyService.addAndUpdate(key,value);
-		return new ResponseEntity<>(key +value, HttpStatus.OK);
+		return new ResponseEntity<>( HttpStatus.OK);
 	}
 	
 	@GetMapping("/average")
